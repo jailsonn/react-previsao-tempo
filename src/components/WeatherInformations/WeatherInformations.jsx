@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
 
-function Weatherinformation({ weather }) {
+function WeatherInformations({ weather }) {
   console.log(weather);
 
   return (
     <div>
       <h2>{weather.name}</h2>
+
       <div>
         <img
           src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}.png`}
@@ -14,7 +15,7 @@ function Weatherinformation({ weather }) {
       </div>
       <p>{weather.weather[0].description}</p>
       <div>
-        <p>Sensação térmica: {Math.round(weather.main.feels_like)}</p>
+        <p>Sensação térmica: {Math.round(weather.main.feels_like)}ºC</p>
         <p>Umidade: {weather.main.humidity} %</p>
         <p>Pressão: {Math.round(weather.main.pressure)}</p>
       </div>
@@ -22,4 +23,4 @@ function Weatherinformation({ weather }) {
   );
 }
 
-export default Weatherinformation;
+export default WeatherInformations;
